@@ -97,6 +97,17 @@
   pre{background:#0C1120;border:1px solid var(--line);border-radius:10px;padding:16px;overflow-x:auto;margin:12px 0 0}
   pre code{background:none;border:0;padding:0}
 
+  /* Screenshots. The PNGs carry their own transparent shadow, so they need no
+     border — a frame on top of a shadow reads as a box, not as a window. */
+  .shots{display:grid;gap:34px;align-items:center}
+  @media(min-width:760px){.shots{grid-template-columns:1fr 1fr}}
+  figure.shot{margin:0 auto;max-width:468px;min-width:0}
+  /* The popover is a tall, narrow surface; capped near its natural width so it
+     stays pixel-crisp instead of being upscaled to fill the column. */
+  figure.shot.narrow{max-width:388px}
+  figure.shot img{display:block;width:100%;height:auto}
+  figure.shot figcaption{margin-top:14px;color:var(--muted);font-size:15px;line-height:1.55}
+
   /* Honest limits */
   .limit{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
   .limit:last-child{border-bottom:0}
@@ -150,7 +161,8 @@
     <p class="meta">Version 1.0.1 · 1.3 MB · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
 
     <div class="hero-art">
-      <img src="images/hero.png" alt="Window Pin app icon beside its name and the tagline: hold any app's window in place, and float your own panel on top." width="1280" height="400">
+      <img src="images/screenshot-hero.png" width="1440" height="860" decoding="async"
+           alt="Window Pin running: the menu bar popover listing open windows with a pinned window held at the bottom right, beside the floating panel waiting for something to be dropped into it.">
     </div>
   </div>
 
@@ -175,7 +187,28 @@
       </div>
 
       <div class="hero-art" style="margin-top:24px">
-        <img src="images/overview.png" alt="Illustration: the Floating Panel showing a video and a browser window, next to a second window pinned to a fixed frame." width="1280" height="620">
+        <img src="images/overview.png" alt="Illustration: the Floating Panel showing a video and a browser window, next to a second window pinned to a fixed frame." width="1280" height="620" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots">
+    <div class="wrap">
+      <h2>See it before you download</h2>
+      <p class="sub">These are the real screens, rendered from the app's own interface code. Only the window names are stand-ins — everything else is what you get.</p>
+
+      <div class="shots">
+        <figure class="shot narrow">
+          <img src="images/screenshot-popover-light.png" width="776" height="1244" loading="lazy" decoding="async"
+               alt="The Window Pin popover: a Floating Panel row with an Open button; a list of open windows showing each app, its window title and its size; an amber bar naming the window currently held and where it is held; an Unpin button; five screen thumbnails for choosing a corner, with bottom right selected; and a size selector set to fifty percent.">
+          <figcaption>Click the pin in your menu bar and this is the whole app — pick a window, pin it, then snap it to a corner at the size you want. The thumbnails show the frame the window will actually take.</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <img src="images/screenshot-panel-light.png" width="936" height="616" loading="lazy" decoding="async"
+               alt="The floating panel before anything has been dropped into it: a dashed drop area around the message, drop anything here, a link, image, PDF, video or text.">
+          <figcaption>The floating panel starts empty and stays above your other windows. Drop a link, image, PDF, video or text onto it — a dropped link stays a real page you can click and type in.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -251,7 +284,7 @@
       <ol class="steps">
         <li>
           <strong>Move it to Applications first</strong>
-          <p>Unzip, then drag <code>WindowPin.app</code> into your <code>Applications</code> folder <em>before</em> opening it. Run it from Downloads and macOS keeps it in a temporary location where permissions can't be saved — the app will tell you and stop.</p>
+          <p>Unzip, then drag <code>WindowPin.app</code> into your <code>Applications</code> folder <em>before</em> opening it. Run it from Downloads and macOS keeps it in a temporary location where permissions can never be saved — if that happens, Window Pin offers to move itself there and reopen.</p>
         </li>
         <li>
           <strong>Allow Accessibility</strong>
@@ -262,6 +295,12 @@
           <p>Pinning works without it. macOS reads this permission only at launch, so quit and reopen Window Pin after enabling it.</p>
         </li>
       </ol>
+
+      <figure class="shot narrow" style="margin-top:30px">
+        <img src="images/screenshot-permission-light.png" width="776" height="536" loading="lazy" decoding="async"
+             alt="The screen Window Pin shows until Accessibility is granted: a heading reading Accessibility access needed, the three numbered steps for turning it on in System Settings, and buttons to open Settings or re-check.">
+        <figcaption>Step&nbsp;2 as the app shows it. Until Accessibility is on, the pinning half is replaced by this — the panel half keeps working regardless.</figcaption>
+      </figure>
 
       <div class="cta-row" style="margin-top:28px">
         <a class="btn btn-primary" href="WindowPin.zip" download>
