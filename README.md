@@ -9,5 +9,6 @@ provides an always-on-top panel for dropped content.
 One `index.html` with inline CSS — no build step, no dependencies. Edit and push;
 GitHub Pages serves the repository root of `main`.
 
-Download links point at the latest release in the application repository, so the
-site needs no changes when a new version ships.
+`WindowPin.zip` is served from this repository, so visitors download the app
+straight from the site with no detour. To ship a new version, replace that file
+and update the version and size in the hero caption.
