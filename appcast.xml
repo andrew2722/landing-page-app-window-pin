@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Window Pin</title>
+    <link>https://andrew2722.github.io/landing-page-app-window-pin/appcast.xml</link>
+    <description>Updates for Window Pin.</description>
+    <language>en</language>
+    <item>
+      <title>1.0.5</title>
+      <pubDate>Fri, 11 Sep 2026 11:12:44 +0700</pubDate>
+      <sparkle:version>1.0.5</sparkle:version>
+      <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[Window Pin now updates itself. From this version on, new releases install in the background — you will not need the download page again.]]></description>
+      <enclosure url="https://andrew2722.github.io/landing-page-app-window-pin/updates/WindowPin-1.0.5.zip"
+                 sparkle:edSignature="yxcmEb0ATwH68XatsujcurNE0O+XOKfzdLjuiBy3bpCYrLgCrm7Tbv5mBHM2oE5HXmdJK8KJ1dp/OvUIlg10BA=="
+                 length="2603371"
+                 type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>
