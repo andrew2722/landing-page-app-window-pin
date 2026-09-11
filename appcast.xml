@@ -6,15 +6,15 @@
     <description>Updates for Window Pin.</description>
     <language>en</language>
     <item>
-      <title>1.0.6</title>
-      <pubDate>Fri, 11 Sep 2026 11:34:33 +0700</pubDate>
-      <sparkle:version>1.0.6</sparkle:version>
-      <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
+      <title>1.0.7</title>
+      <pubDate>Fri, 11 Sep 2026 11:54:29 +0700</pubDate>
+      <sparkle:version>1.0.7</sparkle:version>
+      <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[Fixes a broken download: 1.0.5 would not open after unzipping. Window Pin also updates itself from now on.]]></description>
-      <enclosure url="https://andrew2722.github.io/landing-page-app-window-pin/updates/WindowPin-1.0.6.zip"
-                 sparkle:edSignature="lpnkpWPznwoiQpDr2TLWVvvj7DtPd7aNRl7iMsLWyUKfgFIZgHrOQcaN80u/LKPQz90IEM7LsxmPZb2d1mYfAg=="
-                 length="2624666"
+      <description><![CDATA[Window Pin now asks before installing an update rather than doing it quietly.]]></description>
+      <enclosure url="https://andrew2722.github.io/landing-page-app-window-pin/updates/WindowPin-1.0.7.zip"
+                 sparkle:edSignature="58VxM2DGfFO9D7uMqSjI4KLCVn7jAfM98fX7icdJtEnCokm3K7vNREj669gv66J2foukH/PdyTEPrY90IqFRDg=="
+                 length="2624758"
                  type="application/octet-stream" />
     </item>
   </channel>
